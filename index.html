@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Seismological investigation of melt retention in the upper mantle underneath La Réunion</title>
+
+		<link rel="stylesheet" href="reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="reveal.js/css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'reveal.js/text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );           
+		</script>
+            
+        <!--- iframe style -->
+        <style>
+            .p_iframe iframe {
+                width:100%;
+                height:576px;
+            }
+        </style>
+	</head>
+    
+    <!-- presentation starts here -->
+    
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h3>Seismological investigation of melt retention in the upper mantle underneath La Réunion</h3>
+					<small>Thijs Franken, John Armitage, Nobu Fuji, and Alexandre Fournier</small>
+				</section>
+                
+                <!-- some background on the subject -->
+                
+				<section>
+                    <section>
+                        <h3> Melt storage in the zone of partial melting </h3>
+                    </section>
+                    <section>
+                        <p> The East Pacific Rise, Pacific Ocean </p>
+                    </section>
+                    <section>
+                        <p> Afar, Africa </p>
+                    </section>
+                    <section>
+                        <p> La Réunion, </p>
+                    </section>
+                </section>
+                
+                <section>
+                    <h3> Lets do things differently</h3>
+                    <lu style="text-align: left">
+                        <li> Hypothesis: LVZ due to melt retention.</li>
+                        <li> Predict porosity as melt percolates through the mantle. </li>
+                        <li> Predict seismic waveforms due to the retained melt. </li>
+                        <li> Compare the predictions with the observed waveforms. </li>
+                    </lu>
+                </section>
+                    
+                <!-- solve the coupled equations-->
+                
+                <section>     
+                    <section>
+                        <p> Step 1: Solve for melt production and transport </p>
+                        <ul>
+                            <li> Calculate the transport of melt through a porous medium. </li>
+                            <li> We need a relationship between melt porosity and permeability. </li>
+                            <li> This allows a continuity equation to be written. </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <small> Mean velocity: $$ v = (1-\phi) v_{s} + \phi v_{l} $$ </small><br><br>
+                        <small> Modified Darcy's law to relate average and melt velocity: $$ v_{l} - v = \left(1 - \phi\right)\frac{k}{\phi \eta_{l}} \Delta\rho g $$</small><br><br>
+                        <small> Permeability closure equation: $$ k = k_{0}\phi^{3} $$</small><br><br>
+                        <small> Conservation of mass (melt): $$ -m + \partial_{t}\phi + v\partial_{z}\phi + \frac{k_{0}\Delta\rho g}{\eta_{l}} \phi^{2}\left(1-\frac{4}{3}\phi\right)\partial_{z}\phi = 0$$</small>                    
+                    </section>
+                    <section data-background-color="#000000">
+                        <div>
+                            <video width='30%' data-autoplay loop controls='true' src='videos/temp.mp4' type='video/mp4'></video>
+                            <video width='30%' data-autoplay loop controls='true' src='videos/poro.mp4' type='video/mp4'></video>
+                        </div>
+                        <small> That non-linear equation solved using finite elements (FEniCS + Python) </small>
+                    </section>
+                    <section data-background-color="#000000">
+                        <div style="overflow: auto; max-height: 80vh;">
+                            <video width='1200px' data-autoplay loop controls='true' src='videos/poro.mp4' type='video/mp4'></video>
+                        </div>
+                        <small> That non-linear equation solved using finite elements (FEniCS + Python) </small>
+                    </section>
+                    <section>
+                        <p> Solve equations in 1D.</p>
+                    </section>
+                    <section>
+                        <p> Parammeter space </p>
+                    </section>
+                </section>
+                
+                <section>
+                </section>
+                
+			</div>
+		</div>
+
+		<script src="reveal.js/lib/js/head.min.js"></script>
+		<script src="reveal.js/js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+                
+                width: "100%",
+                height: "100%",
+                
+                // to stop plots being half way down the slide
+                // center: false, 
+                
+                math: {
+                    mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+                    //mathjax: 'MathJax/MathJax.js',
+                    config: 'TeX-AMS_HTML-full' // See http://docs.mathjax.org/en/latest/config-files.html
+                },
+				dependencies: [
+					{ src: 'reveal.js/plugin/markdown/marked.js' },
+					{ src: 'reveal.js/plugin/markdown/markdown.js' },
+					{ src: 'reveal.js/plugin/notes/notes.js', async: true },
+					{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'reveal.js/plugin/math/math.js', async: true }
+				]
+			});
+        </script>
+        
+	</body>
+</html>
