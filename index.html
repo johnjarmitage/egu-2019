@@ -45,34 +45,83 @@
 				<section>
                     <section>
                         <h3> Melt storage in the zone of partial melting </h3>
+                        <lu style="text-align: left">
+                            <li> How much melt is stored in the mantle? </li>
+                            <li> If deglaciation can impact decompression melting (Iceland) then transport is fast. </li>
+                            <li> If inverted low seismic velocities are due to melt then transport has to be slow. </li>
+                        </lu>
+                    </section>
+                    <section data-background="white">
+                        <p> The East Pacific Rise, Pacific Ocean </p>
+                        <div>
+                            <img width="900" src="figures/goes-etal-jgr-1.png" style="background:none; border:none; box-shadow:none">
+                        </div>
+                        <small> [Goes et al., JGR-SE, 2012] </small>
                     </section>
                     <section>
                         <p> The East Pacific Rise, Pacific Ocean </p>
+                        <div>
+                            <img width="900" src="figures/goes-etal-jgr-2.png" style="background:none; border:none; box-shadow:none">
+                        </div>
+                        <small> [Goes et al., JGR-SE, 2012] </small>
+                    </section>
+                    <section data-background="white">
+                        <p> The East Pacific Rise, Pacific Ocean </p>
+                        <div>
+                            <img width="900" src="figures/goes-etal-jgr-3.png" style="background:none; border:none; box-shadow:none">
+                        </div>        
+                        <small> [Goes et al., JGR-SE, 2012] </small>
                     </section>
                     <section>
                         <p> Afar, Africa </p>
+                        <div>
+                            <img width="900" src="figures/armitage-etal-epsl-1.png" style="background:none; border:none; box-shadow:none">
+                        </div>    
+                        <small> [Armitage et al., EPSL, 2015] </small>
                     </section>
                     <section>
-                        <p> La Réunion, </p>
+                        <p> Afar, Africa </p>
+                        <div>
+                            <img height="600" src="figures/armitage-etal-epsl-2.png" style="background:none; border:none; box-shadow:none">
+                        </div>    
+                        <small> [Armitage et al., EPSL, 2015] </small>
+                    </section>
+                    <section data-background="white">
+                        <div>
+                        <p> La Réunion </p>
+                            <img height="600" src="figures/fontaine-etal-gji-1.png" style="background:none; border:none; box-shadow:none">
+                        <small> Joint RF and surface wave disspersion [Fontaine et al., GJI, 2015] </small>
+                        </div>    
+                    </section>
+                    <section data-background="white">
+                        <div>
+                        <p> La Réunion - teleseismic arrivals </p>
+                            <img height="650" src="figures/teleseismic.png" style="background:none; border:none; box-shadow:none">
+                        </div>    
+                    </section>
+                    <section>
+                        <div>
+                        <p> La Réunion - teleseismic arrivals </p>
+                            <img height="650" src="figures/teleseismic-arrivals.png" style="background:none; border:none; box-shadow:none">
+                        </div>    
                     </section>
                 </section>
-                
-                <section>
-                    <h3> Lets do things differently</h3>
-                    <lu style="text-align: left">
-                        <li> Hypothesis: LVZ due to melt retention.</li>
-                        <li> Predict porosity as melt percolates through the mantle. </li>
-                        <li> Predict seismic waveforms due to the retained melt. </li>
-                        <li> Compare the predictions with the observed waveforms. </li>
-                    </lu>
-                </section>
-                    
+                                
                 <!-- solve the coupled equations-->
                 
-                <section>     
+                <section>
                     <section>
-                        <p> Step 1: Solve for melt production and transport </p>
-                        <ul>
+                        <h3> Lets do things differently</h3>
+                        <lu style="text-align: left">
+                            <li> Hypothesis: LVZ due to melt retention.</li>
+                            <li> Predict porosity as melt percolates through the mantle. </li>
+                            <li> Predict seismic waveforms due to the retained melt. </li>
+                            <li> Compare the predictions with the observed waveforms. </li>
+                        </lu>
+                    </section>
+                    <section>
+                        <p> Solve for melt production and transport </p>
+                        <ul style="text-align: left">
                             <li> Calculate the transport of melt through a porous medium. </li>
                             <li> We need a relationship between melt porosity and permeability. </li>
                             <li> This allows a continuity equation to be written. </li>
@@ -89,23 +138,70 @@
                             <video width='30%' data-autoplay loop controls='true' src='videos/temp.mp4' type='video/mp4'></video>
                             <video width='30%' data-autoplay loop controls='true' src='videos/poro.mp4' type='video/mp4'></video>
                         </div>
-                        <small> That non-linear equation solved using finite elements (FEniCS + Python) </small>
-                    </section>
-                    <section data-background-color="#000000">
-                        <div style="overflow: auto; max-height: 80vh;">
-                            <video width='1200px' data-autoplay loop controls='true' src='videos/poro.mp4' type='video/mp4'></video>
-                        </div>
-                        <small> That non-linear equation solved using finite elements (FEniCS + Python) </small>
+                        <small> Non-linear equation solved using finite elements (FEniCS + Python) </small>
                     </section>
                     <section>
-                        <p> Solve equations in 1D.</p>
+                        <p> Solve equations in 1D: $u = 10\rm\,m\,yr^{-1}$ and $T_{base} = 1450\rm\,^{\circ}C$</p>
+                        <div>
+                            <img width="950" src="figures/percolate1.png" style="background:none; border:none; box-shadow:none">
+                        </div>
+                    </section>
+                    <section>
+                        <p> Solve equations in 1D: $u = 10\rm\,m\,yr^{-1}$ and $T_{base} = 1450\rm\,^{\circ}C$</p>
+                        <div>
+                            <img width="950" src="figures/percolate2.png" style="background:none; border:none; box-shadow:none">
+                        </div>
+                    </section>
+                    <section>
+                        <p> Solve equations in 1D: $u = 10\rm\,m\,yr^{-1}$ and $T_{base} = 1450\rm\,^{\circ}C$</p>
+                        <div>
+                            <img width="950" src="figures/percolate3.png" style="background:none; border:none; box-shadow:none">
+                        </div>
+                    </section>
+                    <section>
+                        <p> Solve equations in 1D: $u = 10\rm\,m\,yr^{-1}$ and $T_{base} = 1450\rm\,^{\circ}C$</p>
+                        <div>
+                            <img width="950" src="figures/percolate4.png" style="background:none; border:none; box-shadow:none">
+                        </div>
+                    </section>
+                    <section>
+                        <p> Solve equations in 1D: $u = 10\rm\,m\,yr^{-1}$ and $T_{base} = 1450\rm\,^{\circ}C$</p>
+                        <div>
+                            <img width="950" src="figures/percolate5.png" style="background:none; border:none; box-shadow:none">
+                        </div>
                     </section>
                     <section>
                         <p> Parammeter space </p>
+                        $$ 1250{\rm\,^{\circ}C} \leq T_{base} \leq 1500{\rm\,^{\circ}C} $$ <br>
+                        $$ 10^{-9}{\rm\,m^{2}} \leq k_{0} \leq 10^{-5}{\rm\,m^{2}} $$ <br>
+                        $$ 10{\rm\,mm\,yr^{-1}} \leq u \leq 70{\rm\,mm\,yr^{-1}} $$ <br>
                     </section>
                 </section>
                 
+                <!-- synthetic waveforms -->
+                
                 <section>
+                    <section>
+                        <p> Converstion to seismic velocity </p>
+                        <lu style="text-align: left">
+                            <li> Anharmonic P- and S-wave velocities a phase diagram for a pyrolytic composition (Goes et al., 2012).</li>
+                            <li> Simple(ish) Arrhenius-style attenuation model (Goes et al., 2012) </li>
+                            <li> Isotropic reduction in $V_{S}$ and $V_{P}$ from Hammond and Humphreys (2000): 7.9% and 3%. </li>
+                        </lu>
+                    </section>
+                    <section>
+                        <p> Converstion to seismic velocity </p>
+                        <div>
+                            <img = height="650" src="figures/Vs.png" style="background:none; border:none; box-shadow:none">
+                        </div>
+                    </section>
+                    <section>
+                        <p> Wave propagation </p>
+                        <small> We use DMS (??) top propagate waves through the model space </small>
+                        <div>
+                            <img height="600" src="figures/full-waveform-bonin-quake.png" style="background:none; border:none; box-shadow:none">
+                        </div>
+                    </section>
                 </section>
                 
 			</div>
